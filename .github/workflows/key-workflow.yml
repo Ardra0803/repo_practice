@@ -13,7 +13,7 @@ jobs:
       - name: Print Secret
         run: |
             echo "APP_SECRET: ${{ secrets.MY_SECRET_KEY  }}"
-            echo "i_dont_exist: ${{ secrets.i_dont_exist  }}"
+            echo "i_dont_exist: ${{ secrets.MY_SECRET_KEY  }}"
             
       - name: Print Secret as an environment variable
         run: |
