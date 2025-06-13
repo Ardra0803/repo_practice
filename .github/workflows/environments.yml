@@ -1,0 +1,20 @@
+name: GitHub Environments
+
+on:
+  workflow_dispatch:
+
+
+
+jobs:
+  deployment:
+    
+    runs-on: windows-latest
+    environment: 
+      name: production
+      url: https://github.com
+      
+      
+    steps:
+      - name: 'Print secret from environment'
+        run: |
+            echo "APP_SECRET: ${{ secrets.MY_SECRET  }}"
